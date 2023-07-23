@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Player 1 Name EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPlayer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPlayer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 1 Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Player 2 Name EditText -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPlayer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayoutPlayer1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPlayer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player 2 Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Confirmation Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textInputLayoutPlayer2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Confirm" />
+
+</RelativeLayout>
