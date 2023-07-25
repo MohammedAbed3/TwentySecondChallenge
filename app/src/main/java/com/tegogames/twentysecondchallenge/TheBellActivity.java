@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,47 +24,62 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class WhatDoYouKnowActivity extends AppCompatActivity {
+public class TheBellActivity extends AppCompatActivity {
 
-    TextView  question, player1Name,player2Name,tvPlayer1Strike,tvPlayer2Strike;
+
+    TextView question, player1Name,player2Name,tvPlayer1Strike,tvPlayer2Strike;
     Button btnPlayer1Strike,btnPlayer2Strike,nextQuestion;
-     int player1StrikeCount = 0 , player2StrikeCount = 0; // المتغير النقطي لعدد الضربات
+    ImageView theBell;
+
+    int player1StrikeCount = 0 , player2StrikeCount = 0; // المتغير النقطي لعدد الضربات
     QuestionBank bank;
     List<PlayerModel> playerStatsList;
     private LinkedList<String> questions;
     DataBaseOperations dbHelper;
-
-    private List<Integer> player1Strikes;
-
-    // متغير لتخزين قائمة السترايكات للاعب الثاني
-    private List<Integer> player2Strikes;
-
-
-//    int player1Strikes ,player2Strikes;
     private int currentQuestionIndex;
+
+    List<Integer> player1Strikes,player2Strikes;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_what_do_you_know);
+        setContentView(R.layout.activity_the_bell);
+
+        player1Strikes  = getIntent().getIntegerArrayListExtra("player1");
+        player2Strikes = getIntent().getIntegerArrayListExtra("player2");
+        Toast.makeText(this, player1Strikes+"", Toast.LENGTH_SHORT).show();
 
         dbHelper = new DataBaseOperations(this);
+        dbHelper.deleteAllDataInColumn();
+
+        MediaPlayer player= MediaPlayer.create(this,R.raw.bellring);
+
 
         int totalPlayer1Strikes = dbHelper.getTotalPlayer1Strikes();
         Log.d("ddd", String.valueOf(totalPlayer1Strikes));
 
 
+       question= findViewById(R.id.tv_the_bell_question);
+        player1Name= findViewById(R.id.tv_the_bell_player1_name);
+        player2Name= findViewById(R.id.tv_the_bell_player2_name);
+        tvPlayer1Strike= findViewById(R.id.tv_the_bell_strike_player1);
+        tvPlayer2Strike= findViewById(R.id.tv_the_bell_strike_player2);
+        btnPlayer1Strike= findViewById(R.id.btn_the_bell_player1_strike);
+        btnPlayer2Strike= findViewById(R.id.btn_the_bell_player2_strike);
+        nextQuestion= findViewById(R.id.btn_the_bell_nxt_question);
+        theBell = findViewById(R.id.the_bell);
+
+        bank = new QuestionBank();
 
 
-        question = findViewById(R.id.tv_what_do_you_know_question);
-        player1Name = findViewById(R.id.tv_player1_name);
-        player2Name = findViewById(R.id.tv_player2_name);
-        tvPlayer1Strike = findViewById(R.id.tv_strike_player1);
-        tvPlayer2Strike = findViewById(R.id.tv_strike_player2);
-        btnPlayer1Strike = findViewById(R.id.btn_player1_strike);
-        btnPlayer2Strike = findViewById(R.id.btn_player2_strike);
-        nextQuestion = findViewById(R.id.btn_nxt_question);
+        theBell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                player.start();
 
+            }
+        });
 
         List<String> playerNames = dbHelper.getFirstAndSecondPlayerNames();
 
@@ -70,6 +87,7 @@ public class WhatDoYouKnowActivity extends AppCompatActivity {
         String secondName = playerNames.get(1);
         player1Name.setText(firstName);
         player2Name.setText(secondName);
+
 
         btnPlayer1Strike.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,10 +101,10 @@ public class WhatDoYouKnowActivity extends AppCompatActivity {
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
                 }else {
-                    Toast.makeText(WhatDoYouKnowActivity.this, "dddd", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TheBellActivity.this, "dddd", Toast.LENGTH_SHORT).show();
                 }
                 if (player2StrikeCount ==3){
-                    Toast.makeText(WhatDoYouKnowActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TheBellActivity.this, "Game over", Toast.LENGTH_SHORT).show();
 
                     nextQuestion.setText("Next Quiz");
 
@@ -119,10 +137,10 @@ public class WhatDoYouKnowActivity extends AppCompatActivity {
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
 
                 }else {
-                    Toast.makeText(WhatDoYouKnowActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TheBellActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
                 }
                 if (player2StrikeCount ==3){
-                    Toast.makeText(WhatDoYouKnowActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TheBellActivity.this, "Game over", Toast.LENGTH_SHORT).show();
 
                     nextQuestion.setText("Next Quiz");
 
@@ -179,24 +197,33 @@ public class WhatDoYouKnowActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     private void showConfirmationDialog() {
-        List<Integer> player1Strikes = dbHelper.getPlayers1Strikes();
-        List<Integer> player2Strikes = dbHelper.getPlayers2Strikes();
+        List<Integer> player1Strikes1 = dbHelper.getPlayers1Strikes();
+        List<Integer> player2Strikes2 = dbHelper.getPlayers2Strikes();
 
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle( "confirm");
-        builder.setMessage("player 1 :  " + player1Strikes+"\nplayer 2 :   " + player2Strikes);
+        builder.setMessage("player 1 :  " + player1Strikes1+"\nplayer 2 :   " + player2Strikes2);
 
         builder.setPositiveButton("ذهاب", (dialog, which) -> {
 
-            Intent in = new Intent(getApplicationContext(),AlmazadActivity.class);
-            in.putIntegerArrayListExtra("player1Strikes", (ArrayList<Integer>) player1Strikes);
-            in.putIntegerArrayListExtra("player2Strikes", (ArrayList<Integer>) player2Strikes);
+            Intent in = new Intent(getApplicationContext(),GuessThePlayerActivity.class);
 
+            ArrayList<Integer> player1 = new ArrayList<>();
+            player1.addAll(player1Strikes);
+            player1.addAll(player1Strikes1);
+
+            ArrayList<Integer> player2 = new ArrayList<>();
+            player2.addAll(player2Strikes);
+            player2.addAll(player2Strikes2);
+
+            in.putIntegerArrayListExtra("player11", player1);
+            in.putIntegerArrayListExtra("player22", player2);
             startActivity(in);
 
 //            dialog.dismiss(); // إغلاق مربع الحوار
@@ -209,4 +236,5 @@ public class WhatDoYouKnowActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
 }

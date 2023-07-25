@@ -2,21 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    >
 
     <!-- Player 1 Name EditText -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPlayer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Player 1 Name" />
+            android:hint="Player 1 Name"
+            android:backgroundTint="#2196F3"
+            android:fontFamily="@font/cairo"
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Player 2 Name EditText -->
@@ -24,23 +28,34 @@
         android:id="@+id/textInputLayoutPlayer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textInputLayoutPlayer1">
+        android:layout_below="@id/textInputLayoutPlayer1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Player 2 Name" />
+            android:hint="Player 2 Name"
+            android:backgroundTint="#FF5722"
+            android:fontFamily="@font/cairo"
+
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Confirmation Button -->
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textInputLayoutPlayer2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Confirm" />
+        android:layout_marginTop="32dp"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/cairo"
+
+        android:textSize="18sp"
+        android:background="@drawable/button_background" />
 
 </RelativeLayout>

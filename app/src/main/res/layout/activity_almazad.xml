@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlmazadActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/card"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:id="@+id/tv_almazad_question"
+            android:padding="10dp"
+            android:fontFamily="@font/cairo"
+
+            android:text="asddddddddddddddddddddasdddddddddddddddddddddddddddddddddddddddddddddddd"
+            />
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_below="@+id/card"
+        android:id="@+id/almazad_btn_start_timer"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/cairo"
+
+        android:layout_marginBottom="15dp"
+        android:text="Start Timer" />
+
+
+    <LinearLayout
+        android:layout_below="@+id/almazad_btn_start_timer"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:id="@+id/linear"
+
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- Player 1 Text -->
+            <TextView
+                android:id="@+id/almazad_tv_player1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1 Name"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/cairo"
+
+                android:textSize="22sp" />
+            <Button
+                android:id="@+id/almazad_btn_player1_add"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/cairo"
+
+                android:text="Add" />
+            <!-- Player 1 Button -->
+            <Button
+                android:id="@+id/almazad_btn_player1_strike"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/cairo"
+
+                android:text="Strike" />
+            <TextView
+                android:id="@+id/almazad_tv_strike_player1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strike 0"
+                android:fontFamily="@font/cairo"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+
+            >
+
+            <!-- Player 1 Text -->
+            <TextView
+                android:id="@+id/almazad_tv_player2_name"
+                android:fontFamily="@font/cairo"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2 Name"
+                android:layout_marginBottom="10dp"
+
+                android:textSize="22sp" />
+            <Button
+                android:fontFamily="@font/cairo"
+
+                android:id="@+id/almazad_btn_player2_add"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Add" />
+            <!-- Player 1 Button -->
+            <Button
+                android:fontFamily="@font/cairo"
+
+                android:id="@+id/almazad_btn_player2_strike"
+
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Strike" />
+            <TextView
+                android:fontFamily="@font/cairo"
+
+                android:id="@+id/almazad_tv_strike_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strike 0"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:fontFamily="@font/cairo"
+
+        android:id="@+id/almazad_btn_nxt_question"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:text="Next question" />
+
+</RelativeLayout>

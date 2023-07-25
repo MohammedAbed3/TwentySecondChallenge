@@ -46,6 +46,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+//    public void deleteAllStarc() {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        db.delete(TABLE_PLAYER_STATS, null, null);
+//        db.close();
+//    }
+
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_PLAYER_STATS);

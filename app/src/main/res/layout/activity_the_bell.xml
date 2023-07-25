@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TheBellActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/card"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_the_bell_question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:fontFamily="@font/cairo"
+
+            android:text="asddddddddddddddddddddasdddddddddddddddddddddddddddddddddddddddddddddddd"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear"
+        android:layout_below="@+id/card"
+        android:id="@+id/the_bell"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bell" />
+
+    <LinearLayout
+        android:layout_above="@+id/btn_the_bell_nxt_question"
+
+        android:gravity="center"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="20dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- Player 1 Text -->
+            <TextView
+                android:id="@+id/tv_the_bell_player1_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 1 Name"
+                android:fontFamily="@font/cairo"
+
+                android:layout_marginBottom="10dp"
+                android:textSize="22sp" />
+
+            <!-- Player 1 Button -->
+            <Button
+                android:id="@+id/btn_the_bell_player1_strike"
+                android:layout_width="150dp"
+                android:fontFamily="@font/cairo"
+
+                android:layout_height="60dp"
+                android:text="Strike" />
+            <TextView
+                android:id="@+id/tv_the_bell_strike_player1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo"
+
+                android:text="Strike 0"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp"
+
+            >
+
+            <!-- Player 1 Text -->
+            <TextView
+                android:id="@+id/tv_the_bell_player2_name"
+                android:fontFamily="@font/cairo"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Player 2 Name"
+                android:layout_marginBottom="10dp"
+
+                android:textSize="22sp" />
+
+            <!-- Player 1 Button -->
+            <Button
+                android:id="@+id/btn_the_bell_player2_strike"
+                android:fontFamily="@font/cairo"
+
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="Strike" />
+            <TextView
+                android:fontFamily="@font/cairo"
+
+                android:id="@+id/tv_the_bell_strike_player2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Strike 0"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:fontFamily="@font/cairo"
+
+        android:id="@+id/btn_the_bell_nxt_question"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="20dp"
+
+        android:layout_alignParentBottom="true"
+        android:text="Next question" />
+
+
+</RelativeLayout>

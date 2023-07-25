@@ -57,6 +57,16 @@ public class DataBaseOperations {
 
     }
 
+
+
+
+
+
+
+
+
+
+
 //    public void addPlayersStrike(int strike1,int strike2) {
 //        SQLiteDatabase db = dbHelper.getWritableDatabase();
 //
@@ -202,6 +212,26 @@ public class DataBaseOperations {
 
         return player1Strikes;
     }
+    @SuppressLint("Range")
+
+    public int getTotalPlayer1Strikes() {
+        int totalPlayer1Strikes = 0;
+
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String[] projection = {"SUM(" + DatabaseHelper.COLUMN_PLAYER1_STRIKES + ")"};
+        Cursor cursor = db.query(DatabaseHelper.TABLE_PLAYER_STATS, projection,
+                null, null, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            totalPlayer1Strikes = cursor.getInt(0);
+        }
+
+        cursor.close();
+        db.close();
+
+        return totalPlayer1Strikes;
+    }
+
     public List<Integer> getPlayers2Strikes() {
         List<Integer> playerStrikes = new ArrayList<>();
 
@@ -224,6 +254,40 @@ public class DataBaseOperations {
         db.close();
 
         return playerStrikes;
+    }
+    @SuppressLint("Range")
+    public List<Integer> getPlayersStrikes() {
+        List<Integer> playerStrikes = new ArrayList<>();
+
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String[] projection = {DatabaseHelper.COLUMN_PLAYER1_STRIKES, DatabaseHelper.COLUMN_PLAYER2_STRIKES};
+
+        Cursor cursor = db.query(DatabaseHelper.TABLE_PLAYER_STATS, projection, null, null, null, null, null);
+
+        while (cursor.moveToNext()) {
+            // إضافة عدد السترايكات للاعب الأول
+           int player1Strikes = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COLUMN_PLAYER1_STRIKES));
+            playerStrikes.add(player1Strikes);
+
+            // إضافة عدد السترايكات للاعب الثاني
+            int player2Strikes = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COLUMN_PLAYER2_STRIKES));
+            playerStrikes.add(player2Strikes);
+        }
+
+        cursor.close();
+        db.close();
+
+        return playerStrikes;
+    }
+
+
+    public void deleteAllDataInColumn() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String column = DatabaseHelper.COLUMN_PLAYER1_STRIKES;
+        String column2 = DatabaseHelper.COLUMN_PLAYER2_STRIKES;
+        db.delete(DatabaseHelper.TABLE_PLAYER_STATS, column , null);
+        db.delete(DatabaseHelper.TABLE_PLAYER_STATS, column2 , null);
+        db.close();
     }
 
 

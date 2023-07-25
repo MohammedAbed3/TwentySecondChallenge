@@ -13,6 +13,18 @@
         android:theme="@style/Theme.TwentySecondChallenge"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuessThePlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TheBellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlmazadActivity"
+            android:exported="false" />
+        <activity
             android:name=".WhatDoYouKnowActivity"
             android:exported="false" />
         <activity
