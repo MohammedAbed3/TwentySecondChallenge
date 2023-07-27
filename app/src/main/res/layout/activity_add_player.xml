@@ -17,7 +17,7 @@
             android:id="@+id/editTextPlayer1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Player 1 Name"
+            android:hint="@string/add_player_player1"
             android:backgroundTint="#2196F3"
             android:fontFamily="@font/cairo"
             android:textSize="16sp" />
@@ -36,7 +36,7 @@
             android:id="@+id/editTextPlayer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Player 2 Name"
+            android:hint="@string/add_player_player2"
             android:backgroundTint="#FF5722"
             android:fontFamily="@font/cairo"
 
@@ -51,7 +51,7 @@
         android:layout_below="@id/textInputLayoutPlayer2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Confirm"
+        android:text="@string/add_player_confirm"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/cairo"
 

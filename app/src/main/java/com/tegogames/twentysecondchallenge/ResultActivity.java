@@ -9,9 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.tegogames.twentysecondchallenge.Language.AppCompat;
+
 import java.util.List;
 
-public class ResultActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompat {
 
     TextView tv_player1,tv_player2;
     Button playAgain;

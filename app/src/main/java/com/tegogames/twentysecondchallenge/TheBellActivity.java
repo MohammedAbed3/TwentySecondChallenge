@@ -18,13 +18,14 @@ import android.widget.Toast;
 
 import com.tegogames.twentysecondchallenge.Database.DataBaseOperations;
 import com.tegogames.twentysecondchallenge.Database.PlayerModel;
+import com.tegogames.twentysecondchallenge.Language.AppCompat;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TheBellActivity extends AppCompatActivity {
+public class TheBellActivity extends AppCompat {
 
 
     TextView question, player1Name,player2Name,tvPlayer1Strike,tvPlayer2Strike;
@@ -163,7 +164,7 @@ public class TheBellActivity extends AppCompatActivity {
 
 
         bank = new QuestionBank();
-        questions = bank.whatDoYouKnowQuestion(this,firstName,secondName);
+        questions = bank.theBellQuestion(this,firstName,secondName);
 
         Collections.shuffle(questions);
 

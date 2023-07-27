@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Twenty second challenge</string>
-    <string name="aa"> يبليبلتيبلمنيبتلمننيبل</string>
+
+    <string name="main_play">العب</string>
+
+    <string name="add_player_player1">اسم اللاعب الاول</string>
+    <string name="add_player_player2">اسم اللاعب الثاني</string>
+
+
+    <string name="add_player_confirm">تأكيد</string>
+    <string name="strike">سترايك</string>
+    <string name="next_question">السؤال التالي</string>
+
+    <!-- ماذا تعرف  -->
+    <string name="what_do_you_know_question1">اذكر بعض الدول التي فازت بكأس العالم لكرة القدم (FIFA World Cup).</string>
+    <string name="what_do_you_know_question2">ذكر أندية كرة قدم مشهورة في أوروبا.</string>
+    <string name="what_do_you_know_question3">اذكر اللاعبين الذين فازوا بجائزة الكرة الذهبية (Ballon d\'Or).</string>
+    <string name="what_do_you_know_question4">اذكر الملاعب التي استضافت نهائي كأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question5">اذكر الدول التي فازت ببطولة كأس الأمم الأوروبية (اليورو UEFA).</string>
+    <string name="what_do_you_know_question6">ذكر اللاعبين الذين فازوا بدوري أبطال أوروبا مع أندية مختلفة.</string>
+    <string name="what_do_you_know_question7">اذكر أهم الهدافين في تاريخ الدوري الإنجليزي الممتاز.</string>
+    <string name="what_do_you_know_question8">اذكر الدول التي فازت بكوبا أمريكا (Copa America).</string>
+    <string name="what_do_you_know_question9">ذكر اللاعبين الذين فازوا بجائزة الحذاء الذهبي لأفضل هداف في كأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question10">اذكر الدول الأوروبية التي فازت بدوري أبطال أوروبا (UEFA Champions League).</string>
+
+
+    <string name="what_do_you_know_question11">ذكر الأندية التي فازت بدوري أبطال أوروبا أكثر من مرة.</string>
+    <string name="what_do_you_know_question12">اذكر اللاعبين الذين سجلوا أكثر الأهداف في تاريخ كأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question13">ذكر الدول الأفريقية التي تأهلت لنهائيات كأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question14">اذكر اللاعبين الذين فازوا بدوري أبطال أوروبا والتيجان دوري وكأس العالم لكرة القدم مع أندية مختلفة.</string>
+    <string name="what_do_you_know_question15">ذكر الدول التي فازت بكأس آسيا للأمم (AFC Asian Cup).</string>
+    <string name="what_do_you_know_question16">اذكر أهم الهدافين في تاريخ دوري أبطال أوروبا.</string>
+    <string name="what_do_you_know_question17">ذكر الأندية التي فازت بلقب الدوري الإنجليزي الممتاز.</string>
+    <string name="what_do_you_know_question18">اذكر اللاعبين الذين فازوا بدوري أبطال أوروبا والكرة الذهبية وكأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question19">ذكر الدول الجنوب أمريكية التي فازت بكوبا ليبرتادوريس (Copa Libertadores).</string>
+    <string name="what_do_you_know_question20">اذكر الدول التي فازت بكأس أمم إفريقيا (AFCON).</string>
+
+
+
+    <string name="what_do_you_know_question21">ذكر اللاعبين الذين فازوا بجائزة الكرة الذهبية أكثر من مرة.</string>
+    <string name="what_do_you_know_question22">اذكر الدول الأوروبية التي استضافت كأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question23">ذكر الأندية التي فازت بلقب الدوري الإيطالي (Serie A).</string>
+    <string name="what_do_you_know_question24">اذكر اللاعبين الذين فازوا بدوري أبطال أوروبا وجائزة الكرة الذهبية وكأس العالم لكرة القدم.</string>
+    <string name="what_do_you_know_question25">ذكر الدول التي فازت بكأس الكونكاكاف الذهبية (CONCACAF Gold Cup).</string>
+    <string name="what_do_you_know_question26">اذكر اللاعبين الذين فازوا بدوري أبطال أوروبا وجائزة الكرة الذهبية وبطولة أمم أوروبا (يورو UEFA).</string>
+    <string name="what_do_you_know_question27">ذكر الأندية التي فازت بلقب الدوري الإسباني (La Liga).</string>
+    <string name="what_do_you_know_question28">اذكر اللاعبين الذين فازوا بدوري أبطال أوروبا وجائزة الكرة الذهبية وكوبا أمريكا.</string>
+    <string name="what_do_you_know_question29">اذكر الدول التي فازت ببطولة كأس أمم أوروبا (يورو UEFA) أكثر من مرة.</string>
+    <string name="what_do_you_know_question30">ذكر اللاعبين الذين فازوا بدوري أبطال أوروبا وجائزة الكرة الذهبية وبطولة الدوري الأوروبي (UEFA Europa League).</string>
+
+
+    <string name="what_do_you_know_question31">اذكر أندية فازت بلقب الدوري الألماني (البوندسليغا).</string>
+    <string name="what_do_you_know_question32">اذكر لاعبين فازوا بدوري أبطال أوروبا وكأس أمريكا الجنوبية (كوبا أمريكا).</string>
+    <string name="what_do_you_know_question33">ذكر بلدان فازت بدوري أبطال آسيا.</string>
+    <string name="what_do_you_know_question34">أعطِ قائمة بأهداف مهمة في تاريخ الدوري الألماني (البوندسليغا).</string>
+    <string name="what_do_you_know_question35">اذكر الأندية التي فازت بدوري الأبطال الأوروبي (اليوروبا ليغ) أكثر من مرة.</string>
+    <string name="what_do_you_know_question36">اذكر لاعبين فازوا بحذاء الذهب لأفضل هداف في الدوري الإنجليزي الممتاز.</string>
+    <string name="what_do_you_know_question37">ذكر بلدان فازت بكأس العالم للشباب تحت 20 عامًا (كأس العالم تحت 20).</string>
+    <string name="what_do_you_know_question38">اذكر لاعبين فازوا بدوري أبطال أوروبا وكأس آسيا (كأس آسيا للأمم).</string>
+    <string name="what_do_you_know_question39">اذكر الأندية التي فازت بدوري الدرجة الأولى الفرنسي (ليغ 1).</string>
+    <string name="what_do_you_know_question40">أعطِ قائمة بلاعبين فازوا بدوري أبطال أوروبا ودوري أبطال آسيا.</string>
+
+    <string name="what_do_you_know_question41">اذكر البلدان التي فازت بكأس السوداميريكانا (كوبا سوداميريكانا).</string>
+    <string name="what_do_you_know_question42">اذكر لاعبين فازوا بحذاء الذهب لأفضل هداف في الدوري الإيطالي (السيري آ).</string>
+    <string name="what_do_you_know_question43">اذكر الأندية التي فازت بدوري الدرجة الأولى الهولندي (الإريديفيزي).</string>
+    <string name="what_do_you_know_question44">اذكر لاعبين فازوا بدوري أبطال أوروبا وكأس ليبرتادوريس (كوبا ليبرتادوريس).</string>
+    <string name="what_do_you_know_question45">ذكر البلدان التي فازت بكأس الأمم الأوقيانية (كأس أمم أوقيانيا).</string>
+    <string name="what_do_you_know_question46">أعطِ قائمة بأهداف مهمة في تاريخ الدوري الإسباني (الليجا).</string>
+    <string name="what_do_you_know_question47">اذكر الأندية التي فازت بدوري الدرجة الأولى البرتغالي (البرايميرا ليغا).</string>
+    <string name="what_do_you_know_question48">اذكر لاعبين فازوا بدوري أبطال أوروبا وكأس الأمريكا الشمالية والوسطى والكاريبي (كأس الكونكاكاف).</string>
+    <string name="what_do_you_know_question49">ذكر البلدان التي فازت ببطولة آسيا تحت 19 عامًا (بطولة آسيا تحت 19).</string>
+    <string name="what_do_you_know_question50">اذكر لاعبين فازوا بدوري أبطال أوروبا وكأس الأمم الأوروبية (اليورو) وكأس العالم.</string>
+    <!-- ماذا تعرف  -->
+
+
+    <!-- الجرس   -->
+
+    <string name="the_bell_question1">ما هو اسم أشهر لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question2">ما هو اسم أفضل لاعب في العالم حاليًا؟</string>
+    <string name="the_bell_question3">ما هو اسم أكثر الأندية فوزًا بدوري أبطال أوروبا (دوري الأبطال)؟</string>
+    <string name="the_bell_question4">ما هي أكثر البطولات الأوروبية فوزًا بكأس الاتحاد الأوروبي (يوروبا ليغ)؟</string>
+    <string name="the_bell_question5">ما هو أكثر الأندية تتويجًا بدوري الدرجة الممتازة الإنجليزي؟</string>
+    <string name="the_bell_question6">ما هو أسرع هدف سُجل في مباراة دولية؟</string>
+    <string name="the_bell_question7">ما هو أكثر اللاعبين تتويجًا بكأس العالم؟</string>
+    <string name="the_bell_question8">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية؟</string>
+    <string name="the_bell_question9">من هو أكثر لاعب يسجل أهدافًا في مباريات كأس العالم؟</string>
+    <string name="the_bell_question10">ما هو أكثر لاعب تم انتقاله في تاريخ كرة القدم بقيمة مالية؟</string>
+    <string name="the_bell_question11">ما هو أول دوري كرة قدم أسس في العالم؟</string>
+    <string name="the_bell_question12">ما هو عدد اللاعبين في فريق كرة القدم خلال المباراة؟</string>
+    <string name="the_bell_question13">ما هو عدد التبديلات المسموح بها في مباراة كرة القدم الدولية؟</string>
+    <string name="the_bell_question14">ما هو فترة الشوط الواحد في مباراة كرة القدم؟</string>
+    <string name="the_bell_question15">ما هي مساحة الملعب القياسية لكرة القدم؟</string>
+    <string name="the_bell_question16">ما هو أول بطولة أقيمت لكرة القدم؟</string>
+    <string name="the_bell_question17">ما هي البطولة الأولى التي أقيمت للمنتخبات الوطنية؟</string>
+    <string name="the_bell_question18">من هو أكثر هداف في تاريخ كرة القدم الدولية؟</string>
+    <string name="the_bell_question19">ما هي أكثر الأندية فوزًا بالدوري الإنجليزي الممتاز (البريميرليغ)؟</string>
+    <string name="the_bell_question20">ما هو أكثر ملعب مضيف لنهائي دوري أبطال أوروبا (دوري الأبطال)؟</string>
+    <string name="the_bell_question21">ما هو أكثر لقب تتويجًا لمنتخب كرة القدم في كأس العالم؟</string>
+    <string name="the_bell_question22">ما هو الحدث الرياضي الأكثر مشاهدة على مستوى العالم؟</string>
+    <string name="the_bell_question23">من هو أول فريق يفوز بكأس العالم لكرة القدم؟</string>
+    <string name="the_bell_question24">من هو أكثر مدرب تتويجًا بدوري أبطال أوروبا (دوري الأبطال)؟</string>
+    <string name="the_bell_question25">ما هو أول نادي يفوز بالثلاثية (دوري المحلي وكأس البلد ودوري أبطال أوروبا)؟</string>
+    <string name="the_bell_question26">من هو أكثر لاعب فوزًا بكأس العالم للأندية؟</string>
+    <string name="the_bell_question27">ما هو أكثر لقب فوزًا في بطولة كأس العالم للأندية؟</string>
+    <string name="the_bell_question28">ما هو أول نادي يفوز بكأس العالم للأندية؟</string>
+    <string name="the_bell_question29">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في بطولة كأس العالم؟</string>
+    <string name="the_bell_question30">ما هو أكثر لاعب فوزًا بجائزة أفضل لاعب في كأس العالم؟</string>
+    <string name="the_bell_question31">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في بطولة كأس العالم؟</string>
+    <string name="the_bell_question32">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question33">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question34">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question35">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question36">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question37">ما هو أكثر لاعب فوزًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question38">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question39">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question40">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question41">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question42">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question43">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question44">ما هو أكثر لاعب تتويجًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question45">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question46">ما هو أكثر لاعب فوزًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question47">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question48">ما هو أكثر لاعب تتويجًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question49">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
+    <string name="the_bell_question50">ما هو أكثر لاعب تتويجًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
+
+
+
 </resources>

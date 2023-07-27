@@ -6,6 +6,8 @@
     android:orientation="vertical"
     tools:context=".WhatDoYouKnowActivity">
 
+
+
     <androidx.cardview.widget.CardView
 
         android:layout_width="match_parent"
@@ -16,6 +18,7 @@
         android:elevation="15dp"
 
         >
+
         <TextView
             android:gravity="center"
 
@@ -72,7 +75,7 @@
             android:layout_height="60dp"
             android:fontFamily="@font/cairo"
 
-            android:text="Strike" />
+            android:text="@string/strike" />
         <TextView
             android:id="@+id/tv_strike_player1"
 
@@ -115,7 +118,7 @@
             android:fontFamily="@font/cairo"
 
             android:layout_height="60dp"
-            android:text="Strike" />
+            android:text="@string/strike" />
         <TextView
             android:id="@+id/tv_strike_player2"
             android:layout_width="wrap_content"
@@ -141,6 +144,8 @@
         android:layout_marginHorizontal="20dp"
 
         android:layout_alignParentBottom="true"
-        android:text="Next question" />
+        android:text="@string/next_question" />
+
+
 
 </RelativeLayout>

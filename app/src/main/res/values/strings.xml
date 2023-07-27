@@ -1,5 +1,130 @@
 <resources>
     <string name="app_name">Twenty second challenge</string>
-    <string name="aa">Twenty second challenge</string>
+
+
+
+    <string name="main_play">Play</string>
+    <string name="add_player_player1">The first player\'s name</string>
+    <string name="add_player_player2">The name of the second player</string>
+
+    <string name="add_player_confirm">Confirm</string>
+    <string name="strike">Strike</string>
+    <string name="next_question">Next question</string>
+
+
+
+    <!-- ماذا تعرف  -->
+
+    <string name="what_do_you_know_question1">Name some countries that have won the FIFA World Cup.</string>
+    <string name="what_do_you_know_question2">Mention famous football clubs from Europe.</string>
+    <string name="what_do_you_know_question3">Name players who have won the Ballon d\'Or award.</string>
+    <string name="what_do_you_know_question4">List stadiums that have hosted the FIFA World Cup final.</string>
+    <string name="what_do_you_know_question5">Name countries that have won the UEFA European Championship (Euro).</string>
+    <string name="what_do_you_know_question6">Mention players who have won the UEFA Champions League with different clubs.</string>
+    <string name="what_do_you_know_question7">List top goal scorers in the history of the English Premier League.</string>
+    <string name="what_do_you_know_question8">Name countries that have won the Copa America.</string>
+    <string name="what_do_you_know_question9">Mention players who have won the Golden Boot at the FIFA World Cup.</string>
+    <string name="what_do_you_know_question10">List European countries that have won the UEFA Champions League.</string>
+
+    <string name="what_do_you_know_question11">Name clubs that have won the UEFA Champions League multiple times.</string>
+    <string name="what_do_you_know_question12">Mention players who have scored the most goals in FIFA World Cup history.</string>
+    <string name="what_do_you_know_question13">List African countries that have qualified for the FIFA World Cup.</string>
+    <string name="what_do_you_know_question14">Name players who have won the UEFA Europa League with different clubs.</string>
+    <string name="what_do_you_know_question15">Mention countries that have won the AFC Asian Cup.</string>
+    <string name="what_do_you_know_question16">List top goal scorers in the history of the UEFA Champions League.</string>
+    <string name="what_do_you_know_question17">Name clubs that have won the English Premier League title.</string>
+    <string name="what_do_you_know_question18">Mention players who have won the UEFA Champions League and the FIFA World Cup.</string>
+    <string name="what_do_you_know_question19">List South American countries that have won the Copa Libertadores.</string>
+    <string name="what_do_you_know_question20">Name countries that have won the Africa Cup of Nations.</string>
+
+    <string name="what_do_you_know_question21">Mention players who have won the Ballon d\'Or multiple times.</string>
+    <string name="what_do_you_know_question22">List European countries that have hosted the FIFA World Cup.</string>
+    <string name="what_do_you_know_question23">Name clubs that have won the Italian Serie A title.</string>
+    <string name="what_do_you_know_question24">Mention players who have won the UEFA Champions League, the Ballon d\'Or, and the FIFA World Cup.</string>
+    <string name="what_do_you_know_question25">List countries that have won the CONCACAF Gold Cup.</string>
+    <string name="what_do_you_know_question26">Name players who have won the UEFA Champions League, the Ballon d\'Or, and the UEFA European Championship (Euro).</string>
+    <string name="what_do_you_know_question27">Mention clubs that have won the Spanish La Liga title.</string>
+    <string name="what_do_you_know_question28">List players who have won the UEFA Champions League, the Ballon d\'Or, and the Copa America.</string>
+    <string name="what_do_you_know_question29">Name countries that have won the UEFA European Championship Euro more than once.</string>
+    <string name="what_do_you_know_question30">Mention players who have won the UEFA Champions League, the Ballon d\'Or, and the UEFA Europa League.</string>
+
+
+    <string name="what_do_you_know_question31">List clubs that have won the German Bundesliga title.</string>
+    <string name="what_do_you_know_question32">Mention players who have won the UEFA Champions League and the Copa America.</string>
+    <string name="what_do_you_know_question33">Name countries that have won the AFC Champions League.</string>
+    <string name="what_do_you_know_question34">List top goal scorers in the history of the German Bundesliga.</string>
+    <string name="what_do_you_know_question35">Mention clubs that have won the UEFA Europa League multiple times.</string>
+    <string name="what_do_you_know_question36">Name players who have won the English Premier League Golden Boot.</string>
+    <string name="what_do_you_know_question37">List countries that have won the FIFA U-20 World Cup.</string>
+    <string name="what_do_you_know_question38">Mention players who have won the UEFA Champions League and the AFC Asian Cup.</string>
+    <string name="what_do_you_know_question39">Name clubs that have won the French Ligue 1 title.</string>
+    <string name="what_do_you_know_question40">List players who have won the UEFA Champions League and the AFC Champions League.</string>
+
+    <string name="what_do_you_know_question41">Mention countries that have won the CONMEBOL Sudamericana.</string>
+    <string name="what_do_you_know_question42">Name players who have won the Italian Serie A Golden Boot.</string>
+    <string name="what_do_you_know_question43">List clubs that have won the Dutch Eredivisie title.</string>
+    <string name="what_do_you_know_question44">Mention players who have won the UEFA Champions League and the Copa Libertadores.</string>
+    <string name="what_do_you_know_question45">Name countries that have won the OFC Nations Cup.</string>
+    <string name="what_do_you_know_question46">List top goal scorers in the history of the Spanish La Liga.</string>
+    <string name="what_do_you_know_question47">Mention clubs that have won the Portuguese Primeira Liga title.</string>
+    <string name="what_do_you_know_question48">Name players who have won the UEFA Champions League and the CONCACAF Gold Cup.</string>
+    <string name="what_do_you_know_question49">List countries that have won the AFC U-19 Championship.</string>
+    <string name="what_do_you_know_question50">Mention players who have won the UEFA Champions League, the UEFA European Championship (Euro), and the FIFA World Cup.</string>
+    <!-- ماذا تعرف  -->
+
+
+    <!-- الجرس   -->
+
+    <string name="the_bell_question1">What is the name of the most famous player in the history of football?</string>
+    <string name="the_bell_question2">Who is the current best player in the world?</string>
+    <string name="the_bell_question3">Which club has won the most UEFA Champions League (European Cup) titles?</string>
+    <string name="the_bell_question4">Which club has won the most UEFA Europa League (UEFA Cup) titles?</string>
+    <string name="the_bell_question5">Which club has won the most English Premier League titles?</string>
+    <string name="the_bell_question6">What is the fastest goal scored in an international football match?</string>
+    <string name="the_bell_question7">Who are the players with the most World Cup titles?</string>
+    <string name="the_bell_question8">Who has won the most Ballon d\'Or awards?</string>
+    <string name="the_bell_question9">Who is the all-time leading goal scorer in World Cup matches?</string>
+    <string name="the_bell_question10">Which player holds the record for the most expensive transfer in football history?</string>
+    <string name="the_bell_question11">What was the first football league established in the world?</string>
+    <string name="the_bell_question12">How many players are there in a football team during a match?</string>
+    <string name="the_bell_question13">How many substitutions are allowed in an international football match?</string>
+    <string name="the_bell_question14">What is the duration of one half of a football match?</string>
+    <string name="the_bell_question15">What is the standard size of a football pitch?</string>
+    <string name="the_bell_question16">Which was the first football tournament ever held?</string>
+    <string name="the_bell_question17">What was the first international football tournament for national teams?</string>
+    <string name="the_bell_question18">Who is the all-time leading goal scorer in international football?</string>
+    <string name="the_bell_question19">Which clubs have won the most English Premier League (EPL) titles?</string>
+    <string name="the_bell_question20">Which stadium has hosted the most UEFA Champions League (European Cup) finals?</string>
+    <string name="the_bell_question21">Which country has the most World Cup titles?</string>
+    <string name="the_bell_question22">What is the most-watched sporting event worldwide?</string>
+    <string name="the_bell_question23">Which team won the first-ever FIFA World Cup?</string>
+    <string name="the_bell_question24">Who is the most successful manager in UEFA Champions League history?</string>
+    <string name="the_bell_question25">Which club was the first to win the treble (domestic league, domestic cup, and UEFA Champions League)?</string>
+    <string name="the_bell_question26">Who is the player with the most FIFA Club World Cup titles?</string>
+    <string name="the_bell_question27">Which country has the most FIFA Club World Cup titles?</string>
+    <string name="the_bell_question28">Which team won the first-ever FIFA Club World Cup?</string>
+    <string name="the_bell_question29">Who is the player with the most World Cup Golden Ball awards?</string>
+    <string name="the_bell_question30">Who is the player with the most FIFA World Cup Best Young Player awards?</string>
+    <string name="the_bell_question31">Who is the player with the most FIFA World Cup Golden Boot awards?</string>
+    <string name="the_bell_question32">Who is the player with the most FIFA World Cup Silver Ball awards?</string>
+    <string name="the_bell_question33">Who is the player with the most FIFA World Cup Golden Glove awards?</string>
+    <string name="the_bell_question34">Who is the player with the most FIFA World Cup Silver Boot awards?</string>
+    <string name="the_bell_question35">Who is the player with the most FIFA World Cup Bronze Ball awards?</string>
+    <string name="the_bell_question36">Who is the player with the most FIFA World Cup Bronze Boot awards?</string>
+    <string name="the_bell_question37">Who is the player with the most FIFA World Cup Bronze Glove awards?</string>
+    <string name="the_bell_question38">Who is the player with the most FIFA World Cup Most Valuable Player (MVP) awards?</string>
+    <string name="the_bell_question39">Who is the player with the most FIFA World Cup Top Scorer awards?</string>
+    <string name="the_bell_question40">Who is the player with the most FIFA World Cup Best Goalkeeper awards?</string>
+    <string name="the_bell_question41">Who is the player with the most FIFA World Cup Best Young Goalkeeper awards?</string>
+    <string name="the_bell_question42">Who is the player with the most FIFA World Cup Best Young Player awards?</string>
+    <string name="the_bell_question43">Who is the player with the most FIFA World Cup Best Young Player Runner-up awards?</string>
+    <string name="the_bell_question44">Who is the player with the most FIFA World Cup Best Young Player Third Place awards?</string>
+    <string name="the_bell_question45">Who is the player with the most FIFA World Cup Best Young Player Fourth Place awards?</string>
+    <string name="the_bell_question46">Who is the player with the most FIFA World Cup Best Young Player Fifth Place awards?</string>
+    <string name="the_bell_question47">Who is the player with the most FIFA World Cup Best Young Player Sixth Place awards?</string>
+    <string name="the_bell_question48">Who is the player with the most FIFA World Cup Best Young Player Seventh Place awards?</string>
+    <string name="the_bell_question49">Who is the player with the most FIFA World Cup Best Young Player Eighth Place awards?</string>
+    <string name="the_bell_question50">Who is the player with the most FIFA World Cup Best Young Player Ninth Place awards?</string>
+
 
 </resources>

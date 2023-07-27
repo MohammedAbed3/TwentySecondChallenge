@@ -18,13 +18,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tegogames.twentysecondchallenge.Database.DataBaseOperations;
+import com.tegogames.twentysecondchallenge.Language.AppCompat;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class AlmazadActivity extends AppCompatActivity {
+public class AlmazadActivity extends AppCompat {
 
     private  TextView player1Name,player2Name,question,tvPlayer1Strike,tvPlayer2Strike;
    private Button btnPlayer1Strike,btnPlayer2Strike,nextQuestion,startTimer,addPlayer1,addPlayer2;

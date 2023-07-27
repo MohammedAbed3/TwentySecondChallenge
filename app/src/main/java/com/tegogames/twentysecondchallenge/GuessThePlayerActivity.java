@@ -15,13 +15,14 @@ import android.widget.Toast;
 
 import com.tegogames.twentysecondchallenge.Database.DataBaseOperations;
 import com.tegogames.twentysecondchallenge.Database.PlayerModel;
+import com.tegogames.twentysecondchallenge.Language.AppCompat;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
- public class GuessThePlayerActivity extends AppCompatActivity {
+ public class GuessThePlayerActivity extends AppCompat {
      List<Integer> player1Strikes,player2Strikes;
 
      TextView question, player1Name,player2Name,tvPlayer1Strike,tvPlayer2Strike;

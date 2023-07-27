@@ -12,8 +12,9 @@ import android.widget.Toast;
 import com.google.android.material.textfield.TextInputEditText;
 import com.tegogames.twentysecondchallenge.Database.DataBaseOperations;
 import com.tegogames.twentysecondchallenge.Database.DatabaseHelper;
+import com.tegogames.twentysecondchallenge.Language.AppCompat;
 
-public class AddPlayerActivity extends AppCompatActivity {
+public class AddPlayerActivity extends AppCompat {
     private TextInputEditText editTextPlayer1;
     private TextInputEditText editTextPlayer2;
     private Button btnConfirm;
