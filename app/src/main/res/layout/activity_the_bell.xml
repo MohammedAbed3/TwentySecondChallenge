@@ -7,6 +7,21 @@
     tools:context=".TheBellActivity">
 
 
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:text="@string/TheBellText"
+            />
+    </Toolbar>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -17,6 +32,7 @@
         >
 
         <TextView
+            android:gravity="center"
             android:id="@+id/tv_the_bell_question"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -28,7 +44,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
+    <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linear"
@@ -76,9 +92,10 @@
                 android:id="@+id/btn_the_bell_player1_strike"
                 android:layout_width="150dp"
                 android:fontFamily="@font/cairo"
-
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
                 android:layout_height="60dp"
-                android:text="Strike" />
+                android:text="@string/strike" />
             <TextView
                 android:id="@+id/tv_the_bell_strike_player1"
 
@@ -115,10 +132,11 @@
             <Button
                 android:id="@+id/btn_the_bell_player2_strike"
                 android:fontFamily="@font/cairo"
-
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
-                android:text="Strike" />
+                android:text="@string/strike" />
             <TextView
                 android:fontFamily="@font/cairo"
 
@@ -140,9 +158,10 @@
         android:layout_marginBottom="15dp"
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="20dp"
-
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"
-        android:text="Next question" />
+        android:text="@string/next_question" />
 
 
 </RelativeLayout>

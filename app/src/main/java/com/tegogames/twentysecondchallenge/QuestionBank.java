@@ -38,6 +38,41 @@ public class QuestionBank  {
 
         return gameQuestions;
     }
+
+    public LinkedList<String> guessThePlayerQuestion(Context context, String player1, String player2) {
+        List<String> mixedQuestions = guessThePlayerShuffle(context);
+        LinkedList<String> gameQuestions = new LinkedList<>();
+
+        for (int i = 0; i < 10; i++) {
+            // يتم دمج اللاعبين مع الأسئلة المختلطة لإنشاء سؤال اللعبة
+            String question = mixedQuestions.get(i);
+            String player = i % 2 == 0 ? player1 : player2;
+            gameQuestions.add(player + "/" + question);
+        }
+
+        return gameQuestions;
+    }
+    public LinkedList<String> almazadQuestion(Context context, String player1, String player2) {
+        List<String> mixedQuestions = almazadShuffle(context);
+        LinkedList<String> gameQuestions = new LinkedList<>();
+
+        for (int i = 0; i < 10; i++) {
+            // يتم دمج اللاعبين مع الأسئلة المختلطة لإنشاء سؤال اللعبة
+            String question = mixedQuestions.get(i);
+            String player = i % 2 == 0 ? player1 : player2;
+            gameQuestions.add(player + "/" + question);
+        }
+
+        return gameQuestions;
+    }
+
+
+
+
+
+
+
+
     private List<String> whatDoYouKnowQuestionShuffle(Context context){
         List<String> footballQuestions = new LinkedList<>();
 
@@ -151,6 +186,64 @@ public class QuestionBank  {
         footballQuestions.add(context.getString(R.string.the_bell_question48));
         footballQuestions.add(context.getString(R.string.the_bell_question49));
         footballQuestions.add(context.getString(R.string.the_bell_question50));
+        Collections.shuffle(footballQuestions);
+
+        return footballQuestions;
+
+    }
+    private List<String> guessThePlayerShuffle(Context context){
+        List<String> footballQuestions = new LinkedList<>();
+
+        footballQuestions.add(context.getString(R.string.guess_the_player_question1));
+        footballQuestions.add(context.getString(R.string.guess_the_player_question2));
+        footballQuestions.add(context.getString(R.string.guess_the_player_question3));
+        footballQuestions.add(context.getString(R.string.guess_the_player_question4));
+        footballQuestions.add(context.getString(R.string.guess_the_player_question5));
+        //مكرر
+
+        Collections.shuffle(footballQuestions);
+
+        return footballQuestions;
+
+    }
+    private List<String> almazadShuffle(Context context){
+        List<String> footballQuestions = new LinkedList<>();
+
+        footballQuestions.add(context.getString(R.string.almazad_question1));
+        footballQuestions.add(context.getString(R.string.almazad_question2));
+        footballQuestions.add(context.getString(R.string.almazad_question3));
+        footballQuestions.add(context.getString(R.string.almazad_question4));
+        footballQuestions.add(context.getString(R.string.almazad_question5));
+        footballQuestions.add(context.getString(R.string.almazad_question6));
+        footballQuestions.add(context.getString(R.string.almazad_question7));
+        footballQuestions.add(context.getString(R.string.almazad_question8));
+        footballQuestions.add(context.getString(R.string.almazad_question9));
+        footballQuestions.add(context.getString(R.string.almazad_question10));
+        footballQuestions.add(context.getString(R.string.almazad_question11));
+        footballQuestions.add(context.getString(R.string.almazad_question12));
+        footballQuestions.add(context.getString(R.string.almazad_question13));
+        footballQuestions.add(context.getString(R.string.almazad_question14));
+        footballQuestions.add(context.getString(R.string.almazad_question15));
+        footballQuestions.add(context.getString(R.string.almazad_question16));
+        footballQuestions.add(context.getString(R.string.almazad_question17));
+        footballQuestions.add(context.getString(R.string.almazad_question18));
+        footballQuestions.add(context.getString(R.string.almazad_question19));
+        footballQuestions.add(context.getString(R.string.almazad_question20));
+        footballQuestions.add(context.getString(R.string.almazad_question21));
+        footballQuestions.add(context.getString(R.string.almazad_question22));
+        footballQuestions.add(context.getString(R.string.almazad_question23));
+        footballQuestions.add(context.getString(R.string.almazad_question24));
+        footballQuestions.add(context.getString(R.string.almazad_question25));
+        footballQuestions.add(context.getString(R.string.almazad_question26));
+        footballQuestions.add(context.getString(R.string.almazad_question27));
+        footballQuestions.add(context.getString(R.string.almazad_question28));
+        footballQuestions.add(context.getString(R.string.almazad_question29));
+        footballQuestions.add(context.getString(R.string.almazad_question30));
+        footballQuestions.add(context.getString(R.string.almazad_question31));
+        footballQuestions.add(context.getString(R.string.almazad_question32));
+        footballQuestions.add(context.getString(R.string.almazad_question33));
+
+        Collections.shuffle(footballQuestions);
         Collections.shuffle(footballQuestions);
 
         return footballQuestions;

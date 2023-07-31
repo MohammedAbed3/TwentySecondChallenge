@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +31,8 @@ public class TheBellActivity extends AppCompat {
 
     TextView question, player1Name,player2Name,tvPlayer1Strike,tvPlayer2Strike;
     Button btnPlayer1Strike,btnPlayer2Strike,nextQuestion;
-    ImageView theBell;
+    ImageButton theBell;
+    String firstName ,secondName;
 
     int player1StrikeCount = 0 , player2StrikeCount = 0; // المتغير النقطي لعدد الضربات
     QuestionBank bank;
@@ -49,7 +51,6 @@ public class TheBellActivity extends AppCompat {
 
         player1Strikes  = getIntent().getIntegerArrayListExtra("player1");
         player2Strikes = getIntent().getIntegerArrayListExtra("player2");
-        Toast.makeText(this, player1Strikes+"", Toast.LENGTH_SHORT).show();
 
         dbHelper = new DataBaseOperations(this);
         dbHelper.deleteAllDataInColumn();
@@ -77,6 +78,7 @@ public class TheBellActivity extends AppCompat {
         theBell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                player.seekTo(0);
                 player.start();
 
             }
@@ -84,8 +86,8 @@ public class TheBellActivity extends AppCompat {
 
         List<String> playerNames = dbHelper.getFirstAndSecondPlayerNames();
 
-        String firstName = playerNames.get(0);
-        String secondName = playerNames.get(1);
+         firstName = playerNames.get(0);
+         secondName = playerNames.get(1);
         player1Name.setText(firstName);
         player2Name.setText(secondName);
 
@@ -95,19 +97,31 @@ public class TheBellActivity extends AppCompat {
             public void onClick(View view) {
                 if (player1StrikeCount < 3) {
                     player1StrikeCount++;
-                    tvPlayer1Strike.setText("strike " + player1StrikeCount);
+                    String strike = getString(R.string.strike);
+
+                    tvPlayer1Strike.setText(strike  + player1StrikeCount);
 
 
 
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
-                }else {
-                    Toast.makeText(TheBellActivity.this, "dddd", Toast.LENGTH_SHORT).show();
-                }
-                if (player2StrikeCount ==3){
-                    Toast.makeText(TheBellActivity.this, "Game over", Toast.LENGTH_SHORT).show();
 
-                    nextQuestion.setText("Next Quiz");
+
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
+                }else {
+                    String gameOver = getString(R.string.game_over);
+                    Toast.makeText(TheBellActivity.this, gameOver, Toast.LENGTH_SHORT).show();                }
+                if (player1StrikeCount ==3){
+                    String gameOver = getString(R.string.game_over);
+
+                    Toast.makeText(TheBellActivity.this, gameOver, Toast.LENGTH_SHORT).show();
+                    String nx = getString(R.string.nextquiz);
+
+                    nextQuestion.setText(nx);
 
 
 
@@ -132,18 +146,30 @@ public class TheBellActivity extends AppCompat {
             public void onClick(View view) {
                 if (player2StrikeCount < 3) {
                     player2StrikeCount++;
-                    tvPlayer2Strike.setText("strike " + player2StrikeCount);
+
+                    String strike = getString(R.string.strike);
+
+                    tvPlayer2Strike.setText(strike + player2StrikeCount);
 //                    Toast.makeText(WhatDoYouKnowActivity.this, player2StrikeCount+"dddd", Toast.LENGTH_SHORT).show();
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
 
-                }else {
-                    Toast.makeText(TheBellActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
-                }
-                if (player2StrikeCount ==3){
-                    Toast.makeText(TheBellActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
 
-                    nextQuestion.setText("Next Quiz");
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
+
+                }else {
+                    String gameOver = getString(R.string.game_over);
+                    Toast.makeText(TheBellActivity.this, gameOver, Toast.LENGTH_SHORT).show();                     }
+                if (player2StrikeCount ==3){
+                    String gameOver = getString(R.string.game_over);
+
+                    Toast.makeText(TheBellActivity.this, gameOver, Toast.LENGTH_SHORT).show();
+                    String nx = getString(R.string.nextquiz);
+
+                    nextQuestion.setText(nx);
 
 
 
@@ -166,7 +192,7 @@ public class TheBellActivity extends AppCompat {
         bank = new QuestionBank();
         questions = bank.theBellQuestion(this,firstName,secondName);
 
-        Collections.shuffle(questions);
+
 
         currentQuestionIndex = 0;
 
@@ -208,10 +234,12 @@ public class TheBellActivity extends AppCompat {
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle( "confirm");
-        builder.setMessage("player 1 :  " + player1Strikes1+"\nplayer 2 :   " + player2Strikes2);
+        String con = getString(R.string.result);
 
-        builder.setPositiveButton("ذهاب", (dialog, which) -> {
+        builder.setTitle( con);
+        builder.setMessage(firstName +" "+ player1Strikes1+"\n"+secondName +" " + player2Strikes2);
+        String go = getString(R.string.go);
+        builder.setPositiveButton(go, (dialog, which) -> {
 
             Intent in = new Intent(getApplicationContext(),GuessThePlayerActivity.class);
 
@@ -229,7 +257,8 @@ public class TheBellActivity extends AppCompat {
 
 //            dialog.dismiss(); // إغلاق مربع الحوار
         });
-        builder.setNegativeButton("الغاء", (dialog, which) -> {
+        String cancel = getString(R.string.cancel);
+        builder.setNegativeButton(cancel, (dialog, which) -> {
             // قم بالتصرف عند النقر على زر الغاء
             dialog.dismiss(); // إغلاق مربع الحوار
         });

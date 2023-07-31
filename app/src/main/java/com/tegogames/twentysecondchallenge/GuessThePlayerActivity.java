@@ -29,6 +29,8 @@ import java.util.List;
      Button btnPlayer1Strike,btnPlayer2Strike,nextQuestion;
      int player1StrikeCount = 0 , player2StrikeCount = 0; // المتغير النقطي لعدد الضربات
      QuestionBank bank;
+     String firstName ,secondName;
+
      List<PlayerModel> playerStatsList;
      private LinkedList<String> questions;
      DataBaseOperations dbHelper;
@@ -57,13 +59,12 @@ import java.util.List;
          nextQuestion = findViewById(R.id.btn_guess_the_player_nxt_question);
          player1Strikes  = getIntent().getIntegerArrayListExtra("player11");
         player2Strikes = getIntent().getIntegerArrayListExtra("player22");
-        Toast.makeText(this, player1Strikes+"", Toast.LENGTH_SHORT).show();
 
 
          List<String> playerNames = dbHelper.getFirstAndSecondPlayerNames();
 
-         String firstName = playerNames.get(0);
-         String secondName = playerNames.get(1);
+          firstName = playerNames.get(0);
+          secondName = playerNames.get(1);
          player1Name.setText(firstName);
          player2Name.setText(secondName);
 
@@ -73,21 +74,31 @@ import java.util.List;
              public void onClick(View view) {
                  if (player1StrikeCount < 3) {
                      player1StrikeCount++;
-                     tvPlayer1Strike.setText("strike " + player1StrikeCount);
+                     String strike = getString(R.string.strike);
+
+                     tvPlayer1Strike.setText(strike  + player1StrikeCount);
 
 
 
 
                      dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
+
+                     currentQuestionIndex++;
+                     Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                     question.startAnimation(fadeInAnimation);
+                     question.setText(questions.get(currentQuestionIndex));
                  }else {
-                     Toast.makeText(GuessThePlayerActivity.this, "dddd", Toast.LENGTH_SHORT).show();
+                     String gameOver = getString(R.string.game_over);
+                     Toast.makeText(GuessThePlayerActivity.this, gameOver, Toast.LENGTH_SHORT).show();
                  }
-                 if (player2StrikeCount ==3){
-                     Toast.makeText(GuessThePlayerActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                 if (player1StrikeCount ==3){
+                     String gameOver = getString(R.string.game_over);
 
-                     nextQuestion.setText("Next Quiz");
+                     Toast.makeText(GuessThePlayerActivity.this, gameOver, Toast.LENGTH_SHORT).show();
+                     String nx = getString(R.string.nextquiz);
 
-
+                     nextQuestion.setText(nx);
 
                      btnPlayer2Strike.setEnabled(false);
                      btnPlayer1Strike.setEnabled(false);
@@ -110,19 +121,29 @@ import java.util.List;
              public void onClick(View view) {
                  if (player2StrikeCount < 3) {
                      player2StrikeCount++;
-                     tvPlayer2Strike.setText("strike " + player2StrikeCount);
+                     String strike = getString(R.string.strike);
+
+                     tvPlayer2Strike.setText(strike + player2StrikeCount);
 //                    Toast.makeText(WhatDoYouKnowActivity.this, player2StrikeCount+"dddd", Toast.LENGTH_SHORT).show();
 
                      dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
 
+                     currentQuestionIndex++;
+                     Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                     question.startAnimation(fadeInAnimation);
+                     question.setText(questions.get(currentQuestionIndex));
+
                  }else {
-                     Toast.makeText(GuessThePlayerActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
-                 }
+                     String gameOver = getString(R.string.game_over);
+                     Toast.makeText(GuessThePlayerActivity.this, gameOver, Toast.LENGTH_SHORT).show();                 }
                  if (player2StrikeCount ==3){
-                     Toast.makeText(GuessThePlayerActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                     String gameOver = getString(R.string.game_over);
 
-                     nextQuestion.setText("Next Quiz");
+                     Toast.makeText(GuessThePlayerActivity.this, gameOver, Toast.LENGTH_SHORT).show();
+                     String nx = getString(R.string.nextquiz);
 
+                     nextQuestion.setText(nx);
 
 
                      btnPlayer1Strike.setEnabled(false);
@@ -142,9 +163,8 @@ import java.util.List;
 
 
          bank = new QuestionBank();
-         questions = bank.whatDoYouKnowQuestion(this,firstName,secondName);
+         questions = bank.guessThePlayerQuestion(this,firstName,secondName);
 
-         Collections.shuffle(questions);
 
          currentQuestionIndex = 0;
 
@@ -178,25 +198,27 @@ import java.util.List;
     }
 
      private void showConfirmationDialog() {
-         List<Integer> player1Strikes = dbHelper.getPlayers1Strikes();
-         List<Integer> player2Strikes = dbHelper.getPlayers2Strikes();
+         List<Integer> player1Strikes1 = dbHelper.getPlayers1Strikes();
+         List<Integer> player2Strikes2 = dbHelper.getPlayers2Strikes();
 
 
 
          AlertDialog.Builder builder = new AlertDialog.Builder(this);
-         builder.setTitle( "confirm");
-         builder.setMessage("player 1 :  " + player1Strikes+"\nplayer 2 :   " + player2Strikes);
+         String con = getString(R.string.result);
 
-         builder.setPositiveButton("ذهاب", (dialog, which) -> {
+         builder.setTitle( con);
+         builder.setMessage(firstName +" "+ player1Strikes1+"\n"+secondName +" " + player2Strikes2);
+         String go = getString(R.string.go);
+         builder.setPositiveButton(go, (dialog, which) -> {
 
              Intent in = new Intent(getApplicationContext(),ResultActivity.class);
 
              ArrayList<Integer> player1 = new ArrayList<>();
-             player1.addAll(player1Strikes);
+             player1.addAll(player1Strikes1);
              player1.addAll(player1Strikes11);
 
              ArrayList<Integer> player2 = new ArrayList<>();
-             player2.addAll(player2Strikes);
+             player2.addAll(player2Strikes2);
              player2.addAll(player2Strikes22);
 
              in.putIntegerArrayListExtra("p1", player1);
@@ -205,7 +227,8 @@ import java.util.List;
 
 //            dialog.dismiss(); // إغلاق مربع الحوار
          });
-         builder.setNegativeButton("الغاء", (dialog, which) -> {
+         String cancel = getString(R.string.cancel);
+         builder.setNegativeButton(cancel, (dialog, which) -> {
              // قم بالتصرف عند النقر على زر الغاء
              dialog.dismiss(); // إغلاق مربع الحوار
          });

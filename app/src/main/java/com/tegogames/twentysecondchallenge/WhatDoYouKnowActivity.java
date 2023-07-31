@@ -37,7 +37,7 @@ public class WhatDoYouKnowActivity extends AppCompat {
 
     // متغير لتخزين قائمة السترايكات للاعب الثاني
     private List<Integer> player2Strikes;
-
+    String firstName,secondName;
 
 //    int player1Strikes ,player2Strikes;
     private int currentQuestionIndex;
@@ -67,30 +67,42 @@ public class WhatDoYouKnowActivity extends AppCompat {
 
         List<String> playerNames = dbHelper.getFirstAndSecondPlayerNames();
 
-        String firstName = playerNames.get(0);
-        String secondName = playerNames.get(1);
+         firstName = playerNames.get(0);
+         secondName = playerNames.get(1);
         player1Name.setText(firstName);
         player2Name.setText(secondName);
 
         btnPlayer1Strike.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if (player1StrikeCount < 3) {
                     player1StrikeCount++;
-                    tvPlayer1Strike.setText("strike " + player1StrikeCount);
+
+                    String strike = getString(R.string.strike);
+
+
+                    tvPlayer1Strike.setText(strike + player1StrikeCount);
 
 
 
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
+
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
                 }else {
-                    Toast.makeText(WhatDoYouKnowActivity.this, "dddd", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WhatDoYouKnowActivity.this, "", Toast.LENGTH_SHORT).show();
                 }
-                if (player2StrikeCount ==3){
+                if (player1StrikeCount ==3){
                     Toast.makeText(WhatDoYouKnowActivity.this, "Game over", Toast.LENGTH_SHORT).show();
 
-                    nextQuestion.setText("Next Quiz");
+                    String next_question = getString(R.string.next_question);
 
+                    nextQuestion.setText(next_question);
 
 
                     btnPlayer2Strike.setEnabled(false);
@@ -110,22 +122,33 @@ public class WhatDoYouKnowActivity extends AppCompat {
 
 
         btnPlayer2Strike.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
                 if (player2StrikeCount < 3) {
                     player2StrikeCount++;
-                    tvPlayer2Strike.setText("strike " + player2StrikeCount);
-//                    Toast.makeText(WhatDoYouKnowActivity.this, player2StrikeCount+"dddd", Toast.LENGTH_SHORT).show();
+
+                    String strike = getString(R.string.strike);
+
+                    tvPlayer2Strike.setText(strike + player2StrikeCount);
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
 
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
+
                 }else {
-                    Toast.makeText(WhatDoYouKnowActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(WhatDoYouKnowActivity.this, "", Toast.LENGTH_SHORT).show();
                 }
                 if (player2StrikeCount ==3){
                     Toast.makeText(WhatDoYouKnowActivity.this, "Game over", Toast.LENGTH_SHORT).show();
 
-                    nextQuestion.setText("Next Quiz");
+                    String next_question = getString(R.string.next_question);
+
+                    nextQuestion.setText(next_question);
 
 
 
@@ -167,7 +190,7 @@ public class WhatDoYouKnowActivity extends AppCompat {
                     currentQuestionIndex++;
                     Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
 
-                    question.setAnimation(fadeInAnimation);
+                    question.startAnimation(fadeInAnimation);
                     question.setText(questions.get(currentQuestionIndex));
                 }else {
 
@@ -188,10 +211,14 @@ public class WhatDoYouKnowActivity extends AppCompat {
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle( "confirm");
-        builder.setMessage("player 1 :  " + player1Strikes+"\nplayer 2 :   " + player2Strikes);
+        String con = getString(R.string.result);
 
-        builder.setPositiveButton("ذهاب", (dialog, which) -> {
+        builder.setTitle( con);
+
+        builder.setMessage(firstName +" "+ player1Strikes+"\n"+secondName +" " + player2Strikes);
+        String go = getString(R.string.go);
+
+        builder.setPositiveButton(go, (dialog, which) -> {
 
             Intent in = new Intent(getApplicationContext(),AlmazadActivity.class);
             in.putIntegerArrayListExtra("player1Strikes", (ArrayList<Integer>) player1Strikes);
@@ -201,7 +228,9 @@ public class WhatDoYouKnowActivity extends AppCompat {
 
 //            dialog.dismiss(); // إغلاق مربع الحوار
         });
-        builder.setNegativeButton("الغاء", (dialog, which) -> {
+        String cancel = getString(R.string.cancel);
+
+        builder.setNegativeButton(cancel, (dialog, which) -> {
             // قم بالتصرف عند النقر على زر الغاء
             dialog.dismiss(); // إغلاق مربع الحوار
         });

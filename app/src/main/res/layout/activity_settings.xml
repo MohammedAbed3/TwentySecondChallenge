@@ -1,30 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsFloder.SettingsActivity">
+
 
     <TextView
-        android:id="@+id/setting_tv_lang"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="147dp"
-        android:layout_toStartOf="@+id/setting_btn_chang_lang"
-        android:text="@string/main_play"
-        android:textSize="24sp" />
+        android:layout_marginStart="10dp"
+        android:text="@string/settings_languages" />
 
     <Button
-        android:id="@+id/setting_btn_chang_lang"
+
+        android:id="@+id/setting_tv_lang"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fontFamily="@font/cairo"
+        android:gravity="start"
+        android:textAllCaps="false"
+        android:paddingStart="10dp"
+        android:text="@string/settings_languages"
+        android:textSize="24sp"
+        android:drawableEnd="@drawable/arrow"
+
+        />
+
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="88dp"
-        android:text="اللغة " />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/about_screen" />
 
-</RelativeLayout>
+    <Button
+
+        android:id="@+id/btn_about"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/arrow"
+        android:fontFamily="@font/cairo"
+
+
+        android:gravity="start"
+        android:paddingStart="10dp"
+        android:text="@string/about_screen"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/connect_us" />
+
+    <Button
+
+        android:id="@+id/btn_connect_us"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/arrow"
+        android:fontFamily="@font/cairo"
+
+
+        android:gravity="start"
+        android:paddingStart="10dp"
+        android:text="@string/connect_us"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/social_media" />
+
+    <Button
+        android:id="@+id/btn_share_app"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_share"
+        android:fontFamily="@font/cairo"
+    android:gravity="start"
+    android:paddingStart="10dp"
+    android:text="@string/share_app"
+    android:textAllCaps="false"
+    android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_rate_app"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:drawableEnd="@drawable/ic_star"
+    android:fontFamily="@font/cairo"
+    android:gravity="start"
+    android:paddingStart="10dp"
+    android:text="@string/rate_app"
+    android:textAllCaps="false"
+    android:textSize="24sp" />
+
+
+</LinearLayout>

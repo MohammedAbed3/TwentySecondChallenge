@@ -2,7 +2,6 @@
     <string name="app_name">Twenty second challenge</string>
 
 
-
     <string name="main_play">Play</string>
     <string name="add_player_player1">The first player\'s name</string>
     <string name="add_player_player2">The name of the second player</string>
@@ -10,7 +9,36 @@
     <string name="add_player_confirm">Confirm</string>
     <string name="strike">Strike</string>
     <string name="next_question">Next question</string>
+    <string name="settings_languages">Languages</string>
+    <string name="about_dis">I am Mohamed, an application developer who is interested in the world of programming and information technology. I have a passion Since the beginning of my career in development, best and best and best solutions I have experience in developing mobile applications and electronic device applications, and I use them in retail and retail uses.I believe in connecting and programming applications in a sustainable and flexible way, allowing me to cope with future changes and improve products over time. I believe that technology can make a real collective difference in people\'s lives, and I aim to develop services that meet the needs of society and improve its digital experience.</string>
+    <string name="about_screen">About</string>
+    <string name="connct_us_tv">Please send us your feedback or describe any issue you are experiencing</string>
+    <string name="connct_us_hint">Write your feedback here</string>
+    <string name="connct_us_sent">send</string>
 
+    <string name="connect_us">Connect Us</string>
+    <string name="share_app">Share App</string>
+    <string name="social_media">Social Media</string>
+    <string name="rate_app">Rate App</string>
+    <string name="WhatDoYouKnowtext">What Do You Know</string>
+    <string name="AlmazadText">Auction</string>
+    <string name="AlmazadAdd">Add</string>
+    <string name="AlmazadTimer">Start Timer</string>
+
+    <string name="AlmazadTimerRedy">Get Ready</string>
+    <string name="AlmazadTimerFinshe">Time is Over </string>
+    <string name="TheBellText">The Bell </string>
+
+    <string name="guess_the_player">Guess The Player </string>
+
+    <string name="timer_text">Remaining Time: %1$d seconds</string>
+    <string name="go">Go</string>
+    <string name="cancel">Cancel</string>
+    <string name="result">The result</string>
+    <string name="nextquiz">Next Quiz</string>
+
+    <string name="tost_almazad">You must start the auction</string>
+    <string name="game_over">Game over</string>
 
 
     <!-- ماذا تعرف  -->
@@ -125,6 +153,50 @@
     <string name="the_bell_question48">Who is the player with the most FIFA World Cup Best Young Player Seventh Place awards?</string>
     <string name="the_bell_question49">Who is the player with the most FIFA World Cup Best Young Player Eighth Place awards?</string>
     <string name="the_bell_question50">Who is the player with the most FIFA World Cup Best Young Player Ninth Place awards?</string>
+
+    <!--المزاد    -->
+    <string name="almazad_question1">Name some English Premier League clubs based in London</string>
+    <string name="almazad_question2">Which players have scored in El Clásico (Barcelona vs. Real Madrid)?</string>
+    <string name="almazad_question3">Name some French players who have won the Ballon d\'Or</string>
+    <string name="almazad_question4">Name English clubs that won the Premier League Cup</string>
+    <string name="almazad_question5">Name some Spanish clubs  that have won La Liga</string>
+    <string name="almazad_question6">Name some German players who have won the FIFA World Cup</string>
+    <string name="almazad_question7">How many Italian clubs can you name?</string>
+    <string name="almazad_question8">Name some South American players who have won the UEFA Champions League</string>
+    <string name="almazad_question9">Name some English players who have won the UEFA Champions League.</string>
+    <string name="almazad_question10">Name some Brazilian players who have won the Golden Boot in any of the five major leagues</string>
+    <string name="almazad_question11">Name some players who have won the UEFA Champions League with different clubs</string>
+    <string name="almazad_question12">Name some clubs in the English Premier League that have never been relegated</string>
+    <string name="almazad_question13">Name some German clubs that have won the Bundesliga title</string>
+    <string name="almazad_question14">Name some players who have won the Ballon d\'Or playing for Barcelona</string>
+    <string name="almazad_question15">Name some players who have won the Golden Boot in the English Premier League</string>
+    <string name="almazad_question16">Name some clubs that have won the English Premier League since its inception in 1992</string>
+    <string name="almazad_question17">Name some Spanish players who have won the Golden Boot in La Liga</string>
+    <string name="almazad_question18">Name some clubs that have won the UEFA Champions League multiple times</string>
+    <string name="almazad_question19">How many Real Madrid players have won the Ballon d\'Or, can you name?</string>
+    <string name="almazad_question20">Name some Brazilian players who have won the UEFA Champions League</string>
+    <string name="almazad_question21">Name some clubs in Serie A that have never been relegated</string>
+    <string name="almazad_question22">Name the players who won the Ballon d\'Or before</string>
+    <string name="almazad_question23">Name Real Madrid squad in 2017</string>
+    <string name="almazad_question24">Name Barcelona squad in 2011</string>
+    <string name="almazad_question25">How many French players in the Premier League can you name?</string>
+    <string name="almazad_question26">How many Brazilian players play in La Liga can you name?</string>
+    <string name="almazad_question27">How many Spanish players have won the World Cup can you name?</string>
+    <string name="almazad_question28">How many German players have won the World Cup can you name?</string>
+    <string name="almazad_question29">How many goalkeepers play in the top five leagues can you name?</string>
+    <string name="almazad_question30">How many players wear number 7 can you name?</string>
+    <string name="almazad_question31">How many players wear number 10 can you name?</string>
+    <string name="almazad_question32">How many players have been sent off from matches can you name?</string>
+    <string name="almazad_question33">How many midfielders can you name?</string>
+
+
+    <!-- خمن اللاعب   -->
+
+    <string name="guess_the_player_question1">Sporting Lisbon, then Manchester United, then Real Madrid, then Juventus, then Manchester United (again), then Al-Nassr (Saudi Arabia)</string>
+    <string name="guess_the_player_question2">Barcelona, then Paris Saint-Germain (PSG), then Inter Miami</string>
+    <string name="guess_the_player_question3">Santos, then Barcelona, then Paris Saint-Germain (PSG)</string>
+    <string name="guess_the_player_question4">Argentinos Juniors, then Boca Juniors, then Barcelona, then Napoli, then Sevilla, then Newell\'s Old Boys</string>
+    <string name="guess_the_player_question5">Argentinos Juniors, then Boca Juniors, then Barcelona, then Napoli, then Sevilla, then Newell\'s Old Boys</string>
 
 
 </resources>

@@ -7,6 +7,23 @@
     tools:context=".AlmazadActivity">
 
 
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:text="@string/AlmazadText"
+            />
+    </Toolbar>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -20,6 +37,8 @@
             android:textSize="18sp"
             android:id="@+id/tv_almazad_question"
             android:padding="10dp"
+            android:gravity="center"
+
             android:fontFamily="@font/cairo"
 
             android:text="asddddddddddddddddddddasdddddddddddddddddddddddddddddddddddddddddddddddd"
@@ -33,10 +52,12 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginHorizontal="20dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
         android:fontFamily="@font/cairo"
 
         android:layout_marginBottom="15dp"
-        android:text="Start Timer" />
+        android:text="@string/AlmazadTimer" />
 
 
     <LinearLayout
@@ -77,16 +98,19 @@
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:fontFamily="@font/cairo"
-
-                android:text="Add" />
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:text="@string/AlmazadAdd" />
             <!-- Player 1 Button -->
             <Button
                 android:id="@+id/almazad_btn_player1_strike"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:fontFamily="@font/cairo"
-
-                android:text="Strike" />
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
+                android:text="@string/strike" />
             <TextView
                 android:id="@+id/almazad_tv_strike_player1"
 
@@ -120,20 +144,24 @@
                 android:textSize="22sp" />
             <Button
                 android:fontFamily="@font/cairo"
-
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
                 android:id="@+id/almazad_btn_player2_add"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
-                android:text="Add" />
+                android:text="@string/AlmazadAdd" />
             <!-- Player 1 Button -->
             <Button
                 android:fontFamily="@font/cairo"
 
                 android:id="@+id/almazad_btn_player2_strike"
-
+                android:background="@drawable/button_background"
+                android:textColor="@color/white"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
-                android:text="Strike" />
+                android:layout_marginTop="10dp"
+
+                android:text="@string/strike" />
             <TextView
                 android:fontFamily="@font/cairo"
 
@@ -147,7 +175,8 @@
     </LinearLayout>
     <Button
         android:fontFamily="@font/cairo"
-
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
         android:id="@+id/almazad_btn_nxt_question"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -156,6 +185,6 @@
         android:layout_marginBottom="15dp"
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
-        android:text="Next question" />
+        android:text="@string/next_question" />
 
 </RelativeLayout>

@@ -13,9 +13,18 @@
         android:theme="@style/Theme.TwentySecondChallenge"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
-            android:launchMode="singleTask"
+            android:name=".HowToPlayeActivity"
             android:exported="false" />
+        <activity
+            android:name=".SettingsFloder.ConnectUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsFloder.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsFloder.SettingsActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
         <activity
             android:name=".ResultActivity"
             android:exported="false" />
@@ -36,7 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

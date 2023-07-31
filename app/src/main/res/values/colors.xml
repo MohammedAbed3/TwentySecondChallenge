@@ -12,6 +12,7 @@
     <color name="gray">#FFAAAAAA</color>
     <color name="green">#4CAF50</color>
     <color name="blue">#0021D8</color>
+    <color name="orange">#FF5722</color>
     <color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">#533a31</color>
     <!--<color name="colorPrimaryLight">#d7ccc8</color>-->

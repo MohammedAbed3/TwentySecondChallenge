@@ -2,11 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+
     >
+
+
+
 
     <!-- Player 1 Name EditText -->
     <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="16dp"
         android:id="@+id/textInputLayoutPlayer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +20,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer1"
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:hint="@string/add_player_player1"
             android:backgroundTint="#2196F3"
@@ -35,6 +40,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer2"
             android:layout_width="match_parent"
+            android:layout_margin="16dp"
+
             android:layout_height="wrap_content"
             android:hint="@string/add_player_player2"
             android:backgroundTint="#FF5722"
@@ -45,17 +52,21 @@
 
     <!-- Confirmation Button -->
     <Button
+
         android:id="@+id/btnConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textInputLayoutPlayer2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/cairo"
         android:text="@string/add_player_confirm"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/cairo"
-
-        android:textSize="18sp"
-        android:background="@drawable/button_background" />
+        android:textSize="18sp" />
 
 </RelativeLayout>

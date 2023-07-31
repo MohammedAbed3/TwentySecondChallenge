@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="لعبة تحدي الثلاثين"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="لعبة تحدي الثلاثين هي لعبة مسلية وتحفز على التفكير السريع واستخدام الذاكرة. تتطلب اللعبة من المشاركين القدرة على تذكر وتكرار قائمة من العناصر بالتسلسل الصحيح. الهدف هو تذكر وتكرار العناصر بدقة حتى تصل إلى العنصر رقم 30"
+        android:textSize="18sp"
+        android:lineSpacingExtra="8dp"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+</LinearLayout>

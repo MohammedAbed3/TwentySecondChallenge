@@ -1,10 +1,8 @@
 package com.tegogames.twentysecondchallenge;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -41,6 +39,7 @@ public class AlmazadActivity extends AppCompat {
     private int currentQuestionIndex;
 
     MediaPlayer player;
+    String firstName ,secondName;
     List<Integer> player1Strikes,player2Strikes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,13 +52,11 @@ public class AlmazadActivity extends AppCompat {
         int totalPlayer1Strikes = dbHelper.getTotalPlayer1Strikes();
         Log.d("ddd", String.valueOf(totalPlayer1Strikes));
 
-//        Log.d("ddddddddd",wa.toString());
-//        Log.d("ddddddddd",wa.size()+"");
+
 
 
         player1Strikes  = getIntent().getIntegerArrayListExtra("player1Strikes");
         player2Strikes = getIntent().getIntegerArrayListExtra("player2Strikes");
-        Toast.makeText(this, player1Strikes+"", Toast.LENGTH_SHORT).show();
 
 
         player1Name = findViewById(R.id.almazad_tv_player1_name);
@@ -79,8 +76,8 @@ public class AlmazadActivity extends AppCompat {
 
         List<String> playerNames = dbHelper.getFirstAndSecondPlayerNames();
 
-        String firstName = playerNames.get(0);
-        String secondName = playerNames.get(1);
+         firstName = playerNames.get(0);
+         secondName = playerNames.get(1);
         player1Name.setText(firstName);
         player2Name.setText(secondName);
 
@@ -88,9 +85,9 @@ public class AlmazadActivity extends AppCompat {
 
 
         bank = new QuestionBank();
-        questions = bank.whatDoYouKnowQuestion(this,firstName,secondName); //بدنا نغير الاسئلة
+        questions = bank.almazadQuestion(this,firstName,secondName); //بدنا نغير الاسئلة
 
-        Collections.shuffle(questions);
+
 
         currentQuestionIndex = 0;
 
@@ -102,22 +99,34 @@ public class AlmazadActivity extends AppCompat {
             public void onClick(View view) {
                 if (player1StrikeCount < 3) {
                     player1StrikeCount++;
-                    tvPlayer1Strike.setText("strike " + player1StrikeCount);
+                    String strike = getString(R.string.strike);
+
+                    tvPlayer1Strike.setText(strike  + player1StrikeCount);
 
 
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
+
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
                 }else {
-                    Toast.makeText(AlmazadActivity.this, "dddd", Toast.LENGTH_SHORT).show();
-                }
+                    String gameOver = getString(R.string.game_over);
+                    Toast.makeText(AlmazadActivity.this, gameOver, Toast.LENGTH_SHORT).show();                }
                 if (player1StrikeCount ==3){
-                    Toast.makeText(AlmazadActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                    String gameOver = getString(R.string.game_over);
+
+                    Toast.makeText(AlmazadActivity.this, gameOver, Toast.LENGTH_SHORT).show();
                     addPlayer1.setEnabled(false);
                     addPlayer2.setEnabled(false);
 //                    nextQuestion.setEnabled(false);
                     btnPlayer2Strike.setEnabled(false);
                     startTimer.setEnabled(false);
-                    nextQuestion.setText("Next Quiz");
+                    String nx = getString(R.string.nextquiz);
+
+                    nextQuestion.setText(nx);
 
                     nextQuestion.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -138,21 +147,34 @@ public class AlmazadActivity extends AppCompat {
             public void onClick(View view) {
                 if (player2StrikeCount < 3) {
                     player2StrikeCount++;
-                    tvPlayer2Strike.setText("strike " + player2StrikeCount);
+                    String strike = getString(R.string.strike);
+
+                    tvPlayer2Strike.setText(strike + player2StrikeCount);
 //                    Toast.makeText(WhatDoYouKnowActivity.this, player2StrikeCount+"dddd", Toast.LENGTH_SHORT).show();
 
                     dbHelper.addPlayersStrikes(firstName, player1StrikeCount, secondName, player2StrikeCount);
 
+                    currentQuestionIndex++;
+                    Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+
+                    question.startAnimation(fadeInAnimation);
+                    question.setText(questions.get(currentQuestionIndex));
+
                 }else {
-                    Toast.makeText(AlmazadActivity.this, "stark finsh", Toast.LENGTH_SHORT).show();
-                }
+                    String gameOver = getString(R.string.game_over);
+                    Toast.makeText(AlmazadActivity.this, gameOver, Toast.LENGTH_SHORT).show();                }
 
                 if (player2StrikeCount ==3){
-                    Toast.makeText(AlmazadActivity.this, "Game over", Toast.LENGTH_SHORT).show();
+                    String gameOver = getString(R.string.game_over);
+
+                    Toast.makeText(AlmazadActivity.this, gameOver, Toast.LENGTH_SHORT).show();
                     addPlayer1.setEnabled(false);
                     addPlayer2.setEnabled(false);
                     startTimer.setEnabled(false);
-                    nextQuestion.setText("Next Quiz");
+
+                    String nx = getString(R.string.nextquiz);
+
+                    nextQuestion.setText(nx);
 
 
 
@@ -192,7 +214,10 @@ public class AlmazadActivity extends AppCompat {
                 Handler handler = new Handler();
 
                 if (addPlayer1Count > 0 &&addPlayer2Count > 0 &&addPlayer1Count!=addPlayer2Count){
-                    startTimer.setText("استعد");
+
+                    String re = getString(R.string.AlmazadTimerRedy);
+
+                    startTimer.setText(re);
                     startTimer.setEnabled(false);
 
                     handler.postDelayed(new Runnable() {
@@ -209,8 +234,9 @@ public class AlmazadActivity extends AppCompat {
 
 
                 }else {
-                    Toast.makeText(AlmazadActivity.this, "you hava to add count", Toast.LENGTH_SHORT).show();
-                }
+
+                    String addAuction = getString(R.string.tost_almazad);
+                    Toast.makeText(AlmazadActivity.this, addAuction, Toast.LENGTH_SHORT).show();                }
             }
         });
 
@@ -221,14 +247,20 @@ public class AlmazadActivity extends AppCompat {
                 if (addPlayer1Count !=0 || addPlayer2Count !=0){
                     if (currentQuestionIndex < 10 -1 ) {
                         // زيادة مؤشر السؤال الحالي وعرض السؤال التالي
-                        addPlayer1.setText("Add");
+
+                        String add = getString(R.string.AlmazadAdd);
+
+                        addPlayer1.setText(add);
                         addPlayer1Count = 0;
                         addPlayer2Count = 0;
-                        addPlayer2.setText("Add");
+                        addPlayer2.setText(add);
+                        startTimer.setEnabled(true);
+
                         currentQuestionIndex++;
                         Animation fadeInAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
 
-                        question.setAnimation(fadeInAnimation);
+
+                        question.startAnimation(fadeInAnimation);
                         question.setText(questions.get(currentQuestionIndex));
                     }else {
 
@@ -239,7 +271,9 @@ public class AlmazadActivity extends AppCompat {
                     }
 
                 }else {
-                    Toast.makeText(AlmazadActivity.this, "You must start the auction", Toast.LENGTH_SHORT).show();
+
+                    String addAuction = getString(R.string.tost_almazad);
+                    Toast.makeText(AlmazadActivity.this, addAuction, Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -253,8 +287,9 @@ public class AlmazadActivity extends AppCompat {
             public void onTick(long millisUntilFinished) {
                 // يتم استدعاء هذه الدالة بكل ثانية تمر على التايمر (للحصول على تحديثات)
                 long secondsRemaining = millisUntilFinished / 1000;
-                // قم بتحديث الواجهة المستخدمة لعرض الوقت المتبقي إذا كنت بحاجة إلى ذلك
-                startTimer.setText("الوقت المتبقي: " + secondsRemaining + " ثانية");
+                String timerText = getString(R.string.timer_text, secondsRemaining);
+                startTimer.setText(timerText);
+                startTimer.setText(timerText);
                 addPlayer1.setEnabled(false);
                 addPlayer2.setEnabled(false);
                 nextQuestion.setEnabled(false);
@@ -270,24 +305,26 @@ public class AlmazadActivity extends AppCompat {
                 nextQuestion.setEnabled(true);
                 btnPlayer1Strike.setEnabled(true);
                 btnPlayer2Strike.setEnabled(true);
-                startTimer.setEnabled(true);
 
-                startTimer.setText("انتهى الوقت !!!!");
+                String finsheTime = getResources().getString(R.string.AlmazadTimerFinshe);
+                String startTime = getResources().getString(R.string.AlmazadTimer);
+
+                startTimer.setText(finsheTime);
                 Handler h =new Handler();
                 h.postDelayed(new Runnable() {
                     @Override
                     public void run() {
 
-                        startTimer.setText("Start Timer");
+                        startTimer.setText(startTime);
 
 
                     }
                 }, 2000);
 
-                addPlayer1.setText("Add");
-                addPlayer1Count = 0;
-                addPlayer2Count = 0;
-                addPlayer2.setText("Add");
+//                addPlayer1.setText("Add");
+//                addPlayer1Count = 0;
+//                addPlayer2Count = 0;
+//                addPlayer2.setText("Add");
 
             }
         }.start(); // تشغيل التايمر
@@ -301,10 +338,13 @@ public class AlmazadActivity extends AppCompat {
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle( "confirm");
-        builder.setMessage("player 1 :  " + player1Strikes1+"\nplayer 2 :   " + player2Strikes2);
+        String con = getString(R.string.result);
 
-        builder.setPositiveButton("ذهاب", (dialog, which) -> {
+        builder.setTitle( con);
+        builder.setMessage(firstName +" "+ player1Strikes1+"\n"+secondName +" " + player2Strikes2);
+        String go = getString(R.string.go);
+
+        builder.setPositiveButton(go, (dialog, which) -> {
 
         Intent intent = new Intent(getApplicationContext(), TheBellActivity.class);
 
@@ -323,7 +363,8 @@ public class AlmazadActivity extends AppCompat {
 
 //            dialog.dismiss(); // إغلاق مربع الحوار
         });
-        builder.setNegativeButton("الغاء", (dialog, which) -> {
+        String Cancel = getString(R.string.cancel);
+        builder.setNegativeButton(Cancel, (dialog, which) -> {
             // قم بالتصرف عند النقر على زر الغاء
             dialog.dismiss(); // إغلاق مربع الحوار
         });

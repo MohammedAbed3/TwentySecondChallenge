@@ -12,6 +12,46 @@
     <string name="strike">سترايك</string>
     <string name="next_question">السؤال التالي</string>
 
+    <string name="settings_languages">اللغات</string>
+
+    <string name="about_dis">أنا محمد، مطور تطبيقات متخصص في مجال تطوير البرمجيات وتصميم تطبيقات الهاتف المحمول. أتمتع بخبرة واسعة في بناء تطبيقات مبتكرة وقوية لمنصات Android و iOS.  بدأت رحلتي في عالم التطوير منذ عدة سنوات، ومنذ ذلك الحين، اكتسبت مهارات قوية في لغات البرمجة مثل Java و Kotlin لتطوير تطبيقات Android وSwift لتطبيقات iOS. كما أمتلك خبرة في استخدام أطر العمل (frameworks) المختلفة مثل React Native و Flutter لتطوير تطبيقات متعددة المنصات. أعتبر التصميم الجميل والواجهة الاستخدام السهلة من أهم الجوانب التي أوليها اهتمامًا في تطوير التطبيقات. أسعى دائمًا لإنشاء تجارب مستخدم استثنائية وتطبيقات فعالة وملهمة. أؤمن بقوة التكنولوجيا في تغيير العالم وتحسين حياة الناس. أتطلع دائمًا للتعلم واكتشاف أحدث التقنيات والابتكارات في عالم تطوير التطبيقات. إنها رحلة مستمرة للنمو المهني والتطور. إذا كان لديك أي فكرة لتطبيق أو مشروع تطوير، فأنا مستعد للعمل معك لتحويلها إلى واقع واجهة مبتكرة وقوية. أنا متحمس لتكون جزءًا من مشاريع تطوير تطبيقات رائعة وتحقيق النجاح والتأثير الإيجابي في عالم التكنولوجيا.</string>
+    <string name="about_screen">من انا </string>
+
+
+    <string name="connct_us_tv">يرجى إرسال ملاحظاتك أو وصف أي مشكلة تواجهك</string>
+    <string name="connct_us_hint">اكتب ملاحظاتك هنا</string>
+    <string name="connct_us_sent">إرسال</string>
+    <string name="connect_us">اتصل بنا</string>
+    <string name="share_app">مشاركة التطبيق</string>
+    <string name="social_media">التواصل الاجتماعي</string>
+
+    <string name="rate_app">قيم التطبيق</string>
+
+    <string name="WhatDoYouKnowtext">ماذا تعرف</string>
+    <string name="AlmazadText">المزاد</string>
+
+    <string name="AlmazadAdd">اضافة</string>
+    <string name="AlmazadTimer">ابدا الوقت </string>
+    <string name="AlmazadTimerRedy">استعد </string>
+    <string name="AlmazadTimerFinshe">انتهى الوقت </string>
+
+    <string name="TheBellText">الجرس </string>
+    <string name="timer_text">الوقت المتبقي: %1$d ثانية</string>
+    <string name="go">ذهاب</string>
+    <string name="cancel">الغاء</string>
+    <string name="result">النتيجة</string>
+    <string name="tost_almazad">يجب أن تبدأ المزاد</string>
+    <string name="guess_the_player">خمن اللاعب</string>
+
+    <string name="nextquiz">الاختبار التالي</string>
+    <string name="game_over">انتهت اللعبة</string>
+
+
+
+
+
+
+
     <!-- ماذا تعرف  -->
     <string name="what_do_you_know_question1">اذكر بعض الدول التي فازت بكأس العالم لكرة القدم (FIFA World Cup).</string>
     <string name="what_do_you_know_question2">ذكر أندية كرة قدم مشهورة في أوروبا.</string>
@@ -127,6 +167,53 @@
     <string name="the_bell_question49">ما هو أكثر لاعب تتويجًا بجائزة أفضل لاعب في تاريخ كرة القدم؟</string>
     <string name="the_bell_question50">ما هو أكثر لاعب تتويجًا بجائزة الكرة الذهبية في تاريخ كرة القدم؟</string>
 
+
+
+    <!--المزاد    -->
+
+    <string name="almazad_question1">اذكر بعض أندية الدوري الإنجليزي الممتاز المقرّة في لندن</string>
+    <string name="almazad_question2">أي لاعبين سجلوا في الكلاسيكو (برشلونة مقابل ريال مدريد)؟</string>
+    <string name="almazad_question3">اذكر بعض اللاعبين الفرنسيين الذين فازوا بجائزة الكرة الذهبية (البالون دور)</string>
+    <string name="almazad_question4">اذكر بعض الأندية الإنجليزية التي فازت بكأس الدوري الممتاز (البريميرليج)</string>
+    <string name="almazad_question5">اذكر بعض الأندية الإسبانية التي فازت بالدوري الإسباني (لاليغا)</string>
+    <string name="almazad_question6">اذكر بعض اللاعبين الألمان الذين فازوا بكأس العالم لكرة القدم (كأس العالم FIFA)</string>
+    <string name="almazad_question7">كم نادٍ إيطالي يمكنك ذكره؟</string>
+    <string name="almazad_question8">اذكر بعض اللاعبين الجنوب أمريكيين الذين فازوا بدوري أبطال أوروبا (دوري الأبطال)</string>
+    <string name="almazad_question9">اذكر بعض اللاعبين الإنجليز الذين فازوا بدوري أبطال أوروبا (دوري الأبطال)</string>
+    <string name="almazad_question10">اذكر بعض اللاعبين البرازيليين الذين فازوا بجائزة الحذاء الذهبي في أي من الدوريات الخمس الكبرى</string>
+    <string name="almazad_question11">اذكر بعض اللاعبين الذين فازوا بدوري أبطال أوروبا مع أندية مختلفة</string>
+    <string name="almazad_question12">اذكر بعض الأندية في الدوري الإنجليزي الممتاز التي لم يتم هبوطها أبدًا</string>
+    <string name="almazad_question13">اذكر بعض الأندية الألمانية التي فازت بلقب الدوري الألماني (البوندسليغا)</string>
+    <string name="almazad_question14">اذكر بعض اللاعبين الذين فازوا بجائزة الكرة الذهبية (البالون دور) أثناء لعبهم لبرشلونة</string>
+    <string name="almazad_question15">اذكر بعض اللاعبين الذين فازوا بجائزة الحذاء الذهبي في الدوري الإنجليزي الممتاز</string>
+    <string name="almazad_question16">اذكر بعض الأندية التي فازت بالدوري الإنجليزي الممتاز منذ بدء المسابقة في عام 1992</string>
+    <string name="almazad_question17">اذكر بعض اللاعبين الإسبان الذين فازوا بجائزة الحذاء الذهبي في الدوري الإسباني (لاليغا)</string>
+    <string name="almazad_question18">اذكر بعض الأندية التي فازت بدوري أبطال أوروبا عدة مرات</string>
+    <string name="almazad_question19">كم لاعبًا من ريال مدريد فازوا بجائزة الكرة الذهبية (البالون دور)، يمكنك ذكرهم؟</string>
+    <string name="almazad_question20">اذكر بعض اللاعبين البرازيليين الذين فازوا بدوري أبطال أوروبا (دوري الأبطال)</string>
+    <string name="almazad_question21">اذكر بعض الأندية في الدوري الإيطالي (سيريا أ) التي لم يتم هبوطها أبدًا</string>
+    <string name="almazad_question22">اذكر اللاعبين الذين فازوا بجائزة الكرة الذهبية (البالون دور) من قبل</string>
+    <string name="almazad_question23">اذكر تشكيلة ريال مدريد في عام 2017</string>
+    <string name="almazad_question24">اذكر تشكيلة برشلونة في عام 2011</string>
+    <string name="almazad_question25">كم لاعبًا فرنسيًا في الدوري الإنجليزي الممتاز يمكنك ذكرهم؟</string>
+    <string name="almazad_question26">كم لاعبًا برازيليًا يلعبون في الدوري الإسباني (لاليغا) يمكنك ذكرهم؟</string>
+    <string name="almazad_question27">كم لاعبًا إسبانيًا فازوا بكأس العالم لكرة القدم يمكنك ذكرهم؟</string>
+    <string name="almazad_question28">كم لاعبًا ألمانيًا فازوا بكأس العالم لكرة القدم يمكنك ذكرهم؟</string>
+    <string name="almazad_question29">كم حارس مرمى يلعبون في الدوريات الخمس الكبرى يمكنك ذكرهم؟</string>
+    <string name="almazad_question30">كم لاعبًا يرتدون القميص رقم 7 يمكنك ذكرهم؟</string>
+    <string name="almazad_question31">كم لاعبًا يرتدون القميص رقم 10 يمكنك ذكرهم؟</string>
+    <string name="almazad_question32">كم لاعبًا تم طردهم من المباريات يمكنك ذكرهم؟</string>
+    <string name="almazad_question33">كم لاعبًا وسط ميدان يمكنك ذكرهم؟</string>
+
+
+
+
+    <!-- خمن اللاعب   -->
+    <string name="guess_the_player_question1">سبورتينغ لشبونة، ثم مانشستر يونايتد  ثم  ريال مدريد  ثم إلى يوفنتوس ثم مانشستر يونايتد ثم النصر السعودي</string>
+    <string name="guess_the_player_question2"> برشلونة ثم باريس سان جيرمان ثم إنتر ميامي</string>
+    <string name="guess_the_player_question3"> سانتوس  ثم برشلونة ثم باريس سان جيرمان</string>
+    <string name="guess_the_player_question4"> أرجنتينوس جونيورز  ثم بوكا جونيورز ثم برشلونة ثم نابولي ثم سيفيلا ثم نيولز أولد بويز</string>
+    <string name="guess_the_player_question5"> أرجنتينوس جونيورز  ثم بوكا جونيورز ثم برشلونة ثم نابولي ثم سيفيلا ثم نيولز أولد بويز</string>
 
 
 </resources>
